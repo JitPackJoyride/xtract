@@ -1,11 +1,80 @@
 {
-  "SmarTone Telecommunications Holdings Limited": {
-    "companies": [],
-    "individuals": [
-      {
-        "name": "TSIN Man Kuen Bess",
-        "percentage": 66.6
+  "SmarTone Telecommunications Holdings Limited": [
+    {
+      "SmarTone Telecommunications Holdings Limited": {
+        "companies": [
+          "Sun Hung Kai Properties Limited",
+          "SUNeVision Holdings Ltd."
+        ],
+        "individuals": [
+          {
+            "name": "Kwok Ping-luen, Raymond",
+            "shares": 0.46
+          },
+          {
+            "name": "Fung Yuk-lun, Allen",
+            "shares": 0.04
+          },
+          {
+            "name": "Anna Yip",
+            "shares": 0.29
+          },
+          {
+            "name": "Chan kai-lung, Patrick",
+            "shares": 0.01
+          },
+          {
+            "name": "Chau Kam-kun, Stephen",
+            "shares": 0.01
+          }
+        ]
       }
-    ]
-  }
+    },
+    {
+      "Sun Hung Kai Properties Limited": {
+        "companies": [],
+        "individuals": [
+          {
+            "name": "Kwok Ping-luen, Raymond",
+            "shares": 18.1
+          },
+          {
+            "name": "Chau Kam-kun, Stephen",
+            "shares": 0.0
+          },
+          {
+            "name": "David Norman Prince",
+            "shares": 0.0
+          },
+          {
+            "name": "Siu Hon-wah, Thomas",
+            "shares": 0.0
+          },
+          {
+            "name": "Li Ka-cheung, Eric",
+            "shares": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "SUNeVision Holdings Ltd.": {
+        "companies": [],
+        "individuals": [
+          {
+            "name": "Kwok Ping-luen, Raymond",
+            "shares": 0.15
+          },
+          {
+            "name": "Fung Yuk-lun, Allen",
+            "shares": 0.34
+          },
+          {
+            "name": "Chau Kam-kun, Stephen",
+            "shares": 0.0
+          }
+        ]
+      }
+    }
+  ]
 }
