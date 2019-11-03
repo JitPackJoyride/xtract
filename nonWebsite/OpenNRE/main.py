@@ -1,9 +1,23 @@
-import opennre
+'''import opennre
 model = opennre.get_model('wiki80_cnn_softmax')
 result = model.infer({'text': 'The car cause the traffic jam outside my home', 'h': {'pos': (4, 7)}, 't': {'pos': (18, 29)}})
 print(result)
 test = 'The car cause the traffic jam outside my home'
-print(test[:20])
+print(test[:20])'''
+
+def append_to_csv(items, file):
+    with open(file, 'a', newline="", encoding="utf-8") as fp:
+        writer = csv.writer(fp)
+        for item in items:
+            writer.writerow(item)
+
+def save_to_csv(items, file):
+    with open(file, "w+", newline="", encoding="utf-8") as fp:
+        writer = csv.writer(fp)
+        for item in items:
+            writer.writerow(item)
+
+
 # Read pdf into text
 import PyPDF2
 file = open('ann_report1.pdf', 'rb')
@@ -16,6 +30,7 @@ for i in range(fileReader.numPages):
     text = text + page
     text = text.replace('\n',' ')
 print(text)
+print("Length of text: " + str(len(text)))
 
 # Name entity recognition
 import spacy
@@ -42,9 +57,9 @@ for word in whole_list:
     if word[1] == 'ORG' or word[1] == 'PERSON':
         both_list.append(word[0].strip())
         
-print(org_list)
-print(person_list)
-print(both_list)
+print("org_list: " + str(org_list))
+print("person_list: " + str(person_list))
+print("both_list: " + str(both_list))
 
 # Find the positions of words and turn into dictionary
 org_dict = []
@@ -62,9 +77,9 @@ for word in both_list:
     position = {'pos':(text.find(word), text.find(word) + len(word))}
     both_dict.append({word:position})
 
-print(org_dict)
-print(person_dict)
-print(both_dict)
+print("org_dict: " + str(org_dict))
+print("person_dict: " + str(person_dict))
+print("both_dict: " + str(both_dict))
 
 #for i in range(40):
     #print(text[27555+i])
@@ -95,8 +110,13 @@ for i in range(len(org_dict)):
                 subsidiary.append(org_list[i + j + 1])
                 subsidiary.append(decision)
                 subsidiary_list.append(subsidiary)
-        
-print(subsidiary_list)
+
+print("result: " + str(result))
+print("subsidiary_list: " + str(subsidiary_list))
+
+import csv
+save_to_csv(result, "all_relation.csv")
+save_to_csv(subsidiary_list, "subsidiary_relation.csv")
 
 '''
 import opennre
